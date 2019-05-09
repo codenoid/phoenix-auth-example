@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login</title>
+  <style type="text/css" media="screen">
+    form {
+      margin:0 auto;
+      width:300px
+    }
+    input {
+      margin-bottom:3px;
+      padding:10px;
+      width: 100%;
+      border:1px solid #CCC
+    }
+    button {
+      padding:10px
+    }
+    label {
+      cursor:pointer
+    }
+    #form-switch {
+      display:none
+    }
+    #register-form {
+      display:none
+    }
+    #form-switch:checked~#register-form {
+      display:block
+    }
+    #form-switch:checked~#login-form {
+      display:none
+    }
+  </style>
+</head>
+<body>
+
+  <center>
+    <h1>LOGIN DEMO</h1>
+    <p>Single session login, it's mean your other session will be terminated if you do new login</p>
+  </center>
+
+  <form id="login-form" action="" method="post">
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="hidden" name="_csrf_token" value="<%= @token %>">
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>
