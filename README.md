@@ -19,3 +19,16 @@ Single Session Tech :
 https://github.com/codenoid/phoenix-auth-example/blob/master/single/lib/single/application.ex
 https://github.com/codenoid/phoenix-auth-example/blob/master/single/lib/single_web/controllers/page_controller.ex
 https://github.com/codenoid/phoenix-auth-example/blob/master/single/lib/single_web/helper/session.ex
+
+## Usage
+
+```bash
+git clone https://github.com/codenoid/phoenix-auth-example
+cd phoenix-auth-example
+cd single # pick one
+mix deps.get
+cd assets && npm install
+cd .. && mix phx.server
+google-chrome "http://localhost:4000" # login 1
+google-chrome "http://localhost:4000" --incognito # login 2, login 1 will be destroyed
+```
