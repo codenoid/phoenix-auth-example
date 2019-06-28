@@ -1,8 +1,6 @@
 defmodule CheckSessionPlug do
   use MultiWeb, :controller
 
-  @behaviour Plug
-
   import Plug.Conn
 
   def init(opts) do
